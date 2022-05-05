@@ -10,7 +10,9 @@ import java.util.ArrayList;
 public class Contents {
     private static final Contents instance = new Contents();
     private ArrayList<Number> numbers;
-
+    /**
+     * set the contents of n and des
+     */
     private Contents() {
         numbers = new ArrayList<>();
         numbers.add(new Number("112 Hätänumero, Emergency number", "112 Hätänumeroon tulee soittaa ainoastaan kiireellisissä, todellisissa hätätilanteissa, hengen, terveyden, omaisuuden tai ympäristön ollessa uhattuna tai vaarassa tai, jos on syytä epäillä olevan.\n\n122 The emergency number should only be called in urgent, real emergencies, where there is a threat or danger to life, health, property or the environment, or if there is reason to suspect that."));
@@ -20,10 +22,14 @@ public class Contents {
         numbers.add(new Number("020391920 Mielenterveysneuvonta, Mental health counseling", "020391920 Valtakunnallinen mielenterveysneuvonta, arkisin klo 10.00-15.00.\n\n020391920 Nationwide mental health counseling, weekdays from 10 a.m. to 3 p.m."));
         numbers.add(new Number("116111 Lasten ja nuorten puhelin, Telephone for children and young people", "116111 Lasten ja nuorten puhelin, joka palvelee ma-pe klo 14.00-20.00 ja la-su klo 17.00-20.00 vuoden jokaisena päivänä. Puhelu on täysin ilmainen ja sen voi tehdä nimettömästi.\n\n116111 Telephone for children and young people, open Mon-Fri 14.00-20.00 and Sat-Sun 17.00-20.00 every day of the year. The call is completely free and can be made anonymously."));
     }
-
+    /**
+     * @return the instance value
+     */
     public static Contents getInstance() {
         return instance; }
-
+    /**
+     * @return the number and "name" of the number from the arraylist
+     */
         public ArrayList<Number> getNumbers() { return numbers; }
 
         public Number getNumber(int i) { return numbers.get(i); }

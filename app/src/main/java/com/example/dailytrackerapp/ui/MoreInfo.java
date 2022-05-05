@@ -10,13 +10,19 @@ import android.widget.TextView;
  */
 
 import com.example.dailytrackerapp.R;
-
+/**
+ * This MoreInfo class handless the second activity after choosing something from the ListView.
+ * @author Silja
+ */
 public class MoreInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_info);
+        /**
+         * get values from intent that are stored in bundle
+         */
         Bundle b = getIntent().getExtras();
         int i = b.getInt(ListActivity.MESSAGE, 0);
         /**
